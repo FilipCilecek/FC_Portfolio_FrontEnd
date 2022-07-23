@@ -1,0 +1,557 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+.spofilify {
+  background-color: #121212;
+  user-select: none;
+  display: grid;
+  grid-template-columns: 240px auto;
+  grid-template-rows: 64px 268px auto 91px;
+  height: calc(100vh - 81px);
+  grid-template-areas: 'sidebar header' 'sidebar main' 'sidebar main' 'player player';
+  overflow: hidden;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+.spofilify ::-webkit-scrollbar {
+  display: none;
+}
+@media only screen and (max-width: 1200px) {
+  .spofilify {
+    grid-template-rows: 64px 238px auto 91px;
+  }
+}
+@media only screen and (max-width: 1050px) {
+  .spofilify {
+    grid-template-rows: 64px 203px auto 91px;
+  }
+}
+@media only screen and (max-width: 690px) {
+  .spofilify {
+    grid-template-rows: 64px 218px auto 91px;
+  }
+}
+.spofilify .left-navbar {
+  grid-area: sidebar;
+  background-color: #000000;
+  color: #b4b4b3;
+  height: 100%;
+  width: 240px;
+  position: fixed;
+  left: 0;
+  padding: 20px;
+  text-align: left;
+}
+.spofilify .left-navbar .left-navbar-logo {
+  background-color: #000000;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  font-size: 25px;
+}
+.spofilify .left-navbar .left-navbar-logo div {
+  background-color: #000000;
+  margin-left: 5px;
+}
+.spofilify .left-navbar .left-navbar-logo svg {
+  background-color: #000000;
+  font-size: 40px;
+}
+.spofilify .left-navbar .nav-links {
+  background-color: #000000;
+  padding-top: 30px;
+}
+.spofilify .left-navbar .nav-links .nav-link {
+  background-color: #000000;
+  font-size: 15px;
+  padding-bottom: 22px;
+}
+.spofilify .left-navbar .nav-links .nav-link a {
+  background-color: #000000;
+  color: #b4b4b3;
+  display: flex;
+  align-items: center;
+}
+.spofilify .left-navbar .nav-links .nav-link a:hover path {
+  color: #ffffff;
+  transition: all 0.5s ease 0s;
+}
+.spofilify .left-navbar .nav-links .nav-link a:hover span {
+  color: #ffffff;
+  transition: all 0.5s ease 0s;
+}
+.spofilify .left-navbar .nav-links .nav-link a svg {
+  background-color: #000000;
+  margin-right: 15px;
+  height: 25px;
+  width: 25px;
+}
+.spofilify .left-navbar .nav-links .nav-link a svg path {
+  color: #b4b4b3;
+  transition: all 0.5s ease 0s;
+}
+.spofilify .left-navbar .nav-links .nav-link a span {
+  background-color: #000000;
+  color: #b4b4b3;
+  transition: all 0.5s ease 0s;
+}
+.spofilify .left-navbar hr {
+  height: 1px;
+  border: none;
+  margin-bottom: 20px;
+}
+.spofilify .left-navbar .nav-playlists li {
+  list-style: none;
+  font-size: 14px;
+  background-color: #000000;
+  color: #b4b4b3;
+  padding-bottom: 10px;
+}
+.spofilify .left-navbar .nav-playlists li:hover {
+  color: #ffffff;
+}
+.spofilify #spofilify-header {
+  grid-area: header;
+  background-color: #220507;
+  width: 100%;
+  overflow: hidden;
+  height: 64px;
+  padding: 16px 32px;
+  position: sticky;
+}
+.spofilify #spofilify-header .header-buttons {
+  text-align: left;
+}
+.spofilify #spofilify-header .header-buttons .header-button-left {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 32px;
+  width: 32px;
+  border-radius: 16px;
+  font-size: 18px;
+  border: none;
+  float: left;
+  margin-left: 15px;
+  cursor: pointer;
+}
+.spofilify #spofilify-header .header-buttons .header-button-left:nth-child(2) {
+  margin-left: 15px;
+}
+.spofilify #spofilify-header .header-buttons .header-button-left svg {
+  background-color: transparent;
+}
+.spofilify #spofilify-header .header-buttons .header-button-left svg path {
+  color: #b4b4b3;
+}
+.spofilify #spofilify-header .header-buttons #buttons-right {
+  float: right;
+  display: flex;
+  background-color: transparent;
+}
+.spofilify #spofilify-header .header-buttons #buttons-right #upgrade-button {
+  background-color: transparent;
+  margin-right: 20px;
+  border: 1px solid #b4b4b3;
+  border-radius: 15px;
+  padding: 5px 12px;
+  transition: all 0.3s ease 0s;
+}
+.spofilify #spofilify-header .header-buttons #buttons-right #upgrade-button:hover {
+  background-color: #000000;
+  border: 1px solid #7a7a7a;
+}
+@media only screen and (max-width: 690px) {
+  .spofilify #spofilify-header .header-buttons #buttons-right #upgrade-button {
+    display: none;
+  }
+}
+.spofilify #spofilify-header .header-buttons #buttons-right #login-button {
+  border: none;
+  border-radius: 15px;
+  background-color: #000000;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 8px;
+}
+.spofilify #spofilify-header .header-buttons #buttons-right #login-button span {
+  background-color: #000000;
+}
+.spofilify #spofilify-header .header-buttons #buttons-right #login-button figure {
+  height: 28px;
+  width: 28px;
+  border-radius: 15px;
+}
+.spofilify #spofilify-header .header-buttons #buttons-right #login-button figure img {
+  height: 28px;
+  width: 28px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+.spofilify #spofilify-header .header-buttons #buttons-right #login-button svg {
+  background-color: transparent;
+  height: 16px;
+  width: 16px;
+  margin-right: 5px;
+}
+.spofilify #spofilify-header .header-buttons #buttons-right #login-button:hover {
+  background-color: #1a1a1a;
+}
+.spofilify #spofilify-header .header-buttons #buttons-right #login-button:hover span {
+  background-color: #1a1a1a;
+}
+.spofilify #login-menu {
+  grid-area: recommended;
+  position: absolute;
+  z-index: 99;
+  inset: 0px 0px auto auto;
+  background-color: #1e2122;
+  transform: translate(-32px, 140px);
+}
+.spofilify #login-menu ul {
+  padding: 5px;
+}
+.spofilify #login-menu ul li {
+  list-style: none;
+}
+.spofilify #login-menu ul li .login-menu-button {
+  text-align: left;
+  border: none;
+  padding: 10px;
+  font-size: 14px;
+  width: 100%;
+}
+.spofilify .main-content {
+  grid-area: main;
+  overflow: auto;
+  background-color: #121212;
+}
+.spofilify .main-content .spofilify-recommended {
+  grid-area: main;
+  background-color: transparent;
+  background-image: linear-gradient(#220507, #121212);
+  padding: 0px 30px;
+}
+.spofilify .main-content .spofilify-recommended h1 {
+  text-align: left;
+  background-color: transparent;
+  margin-bottom: 15px;
+}
+.spofilify .main-content .spofilify-recommended .recommended-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  background-color: transparent;
+  gap: 10px;
+}
+.spofilify .main-content .spofilify-recommended .recommended-grid .recommended-item {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-radius: 0px 10px 10px 0px;
+}
+.spofilify .main-content .spofilify-recommended .recommended-grid .recommended-item:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.spofilify .main-content .spofilify-recommended .recommended-grid .recommended-item:hover :nth-child(3) {
+  opacity: 1;
+  height: 40px;
+  transform: translate(-50%, -50%);
+}
+@media only screen and (max-width: 1200px) {
+  .spofilify .main-content .spofilify-recommended .recommended-grid .recommended-item:hover :nth-child(3) {
+    height: 35px;
+  }
+}
+@media only screen and (max-width: 1050px) {
+  .spofilify .main-content .spofilify-recommended .recommended-grid .recommended-item:hover :nth-child(3) {
+    height: 30px;
+  }
+}
+@media only screen and (max-width: 950px) {
+  .spofilify .main-content .spofilify-recommended .recommended-grid .recommended-item:hover :nth-child(3) {
+    height: 0px;
+  }
+}
+.spofilify .main-content .spofilify-recommended .recommended-grid .recommended-item:hover :nth-child(3) path {
+  height: 40px;
+}
+.spofilify .main-content .spofilify-recommended .recommended-grid .recommended-item img {
+  height: 6em;
+  border-radius: 0.5rem 0rem 0rem 0.5rem;
+}
+.spofilify .main-content .spofilify-recommended .recommended-grid .recommended-item span {
+  margin-left: 15px;
+  background-color: transparent;
+  float: left;
+  padding: 7px;
+}
+.spofilify .main-content .spofilify-recommended .recommended-grid .recommended-item svg {
+  height: 1px;
+  opacity: 0;
+  position: absolute;
+  left: 85%;
+  top: 50%;
+  transform: translate(-50%, -30%);
+  font-size: 40px;
+  background-color: transparent;
+  float: right;
+  transition: opacity 0.5s ease-out;
+  transition: transform 0.5s ease-out;
+}
+.spofilify .main-content .spofilify-recommended .recommended-grid .recommended-item svg path {
+  color: #00c441;
+  height: 0;
+}
+@media only screen and (max-width: 1200px) {
+  .spofilify .main-content .spofilify-recommended .recommended-grid .recommended-item span {
+    font-size: 14px;
+    margin-left: 10px;
+  }
+  .spofilify .main-content .spofilify-recommended .recommended-grid .recommended-item img {
+    height: 5em;
+  }
+}
+@media only screen and (max-width: 1050px) {
+  .spofilify .main-content .spofilify-recommended .recommended-grid .recommended-item span {
+    font-size: 14px;
+    margin-left: 5px;
+  }
+  .spofilify .main-content .spofilify-recommended .recommended-grid .recommended-item img {
+    height: 4em;
+  }
+}
+.spofilify .main-content .spofilify-main {
+  grid-area: main;
+  padding: 0px 30px;
+  background-color: #121212;
+  height: 100%;
+}
+.spofilify .main-content .spofilify-main h1 {
+  text-align: left;
+  background-color: transparent;
+  padding: 15px 0px 15px 0px;
+  font-size: 1.5em;
+}
+.spofilify .main-content .spofilify-main .spofilify-main-row {
+  display: flex;
+  gap: 15px;
+  background-color: transparent;
+}
+.spofilify .main-content .spofilify-main .spofilify-main-row .spofilify-main-row-item {
+  max-width: 240px;
+  max-height: 320px;
+  background-color: #1a1a1a;
+  display: inline-block;
+  position: relative;
+  transition: all 0.5s ease-out;
+}
+.spofilify .main-content .spofilify-main .spofilify-main-row .spofilify-main-row-item:hover {
+  background-color: #1e2122;
+}
+.spofilify .main-content .spofilify-main .spofilify-main-row .spofilify-main-row-item:hover svg {
+  opacity: 1;
+  height: 40px;
+  transform: translate(0%, -15%);
+}
+@media only screen and (max-width: 1200px) {
+  .spofilify .main-content .spofilify-main .spofilify-main-row .spofilify-main-row-item:hover svg {
+    height: 35px;
+  }
+}
+@media only screen and (max-width: 1050px) {
+  .spofilify .main-content .spofilify-main .spofilify-main-row .spofilify-main-row-item:hover svg {
+    height: 30px;
+  }
+}
+@media only screen and (max-width: 950px) {
+  .spofilify .main-content .spofilify-main .spofilify-main-row .spofilify-main-row-item:hover svg {
+    height: 0px;
+  }
+}
+.spofilify .main-content .spofilify-main .spofilify-main-row .spofilify-main-row-item:hover svg path {
+  height: 40px;
+}
+.spofilify .main-content .spofilify-main .spofilify-main-row .spofilify-main-row-item img {
+  height: 11em;
+  border-radius: 5px;
+  margin: 18px 18px 5px 18px;
+}
+.spofilify .main-content .spofilify-main .spofilify-main-row .spofilify-main-row-item h2 {
+  background-color: transparent;
+  font-size: 1rem;
+  margin: 0px 18px 0px 18px;
+  text-align: left;
+}
+.spofilify .main-content .spofilify-main .spofilify-main-row .spofilify-main-row-item svg {
+  height: 1px;
+  opacity: 0;
+  position: absolute;
+  left: 66%;
+  top: 52%;
+  background-color: transparent;
+  transition: opacity 0.5s ease-out;
+  transition: transform 0.5s ease-out;
+}
+.spofilify .main-content .spofilify-main .spofilify-main-row .spofilify-main-row-item svg path {
+  color: #00c441;
+  height: 0;
+}
+.spofilify .main-content .spofilify-main .spofilify-main-row .spofilify-main-row-item div {
+  color: #b4b4b3;
+  background-color: transparent;
+  max-width: fit-content;
+  max-height: 2em;
+  line-height: 1em;
+  font-size: 0.8rem;
+  margin: 5px 18px 18px 18px;
+  white-space: normal;
+  overflow: hidden;
+  text-align: left;
+}
+.spofilify .spofilify-player {
+  grid-area: player;
+  position: sticky;
+  background-color: #121414;
+  border-top: 1px gray solid;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 16px 0px 16px;
+}
+.spofilify .spofilify-player .playing {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  width: 20%;
+}
+.spofilify .spofilify-player .playing img {
+  height: 56px;
+}
+.spofilify .spofilify-player .playing #playing-info {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: 0px 14px 0px 14px;
+}
+.spofilify .spofilify-player .playing #playing-info h1 {
+  background-color: transparent;
+  font-size: 13px;
+}
+.spofilify .spofilify-player .playing #playing-info span {
+  background-color: transparent;
+  color: #b4b4b3;
+  font-size: 10px;
+}
+.spofilify .spofilify-player .playing svg {
+  background-color: transparent;
+  padding: 10px;
+}
+@media only screen and (max-width: 900px) {
+  .spofilify .spofilify-player .playing svg {
+    display: none;
+  }
+}
+.spofilify .spofilify-player .player-controls {
+  width: 40%;
+  min-width: 290px;
+  background-color: transparent;
+}
+.spofilify .spofilify-player .player-controls .player-controls-buttons {
+  margin-top: 5px;
+  background-color: transparent;
+}
+.spofilify .spofilify-player .player-controls .player-controls-buttons svg {
+  background-color: transparent;
+  font-size: 18px;
+  padding: 18px 18px 12px 18px;
+}
+.spofilify .spofilify-player .player-controls .player-controls-buttons svg path {
+  color: #b4b4b3;
+}
+.spofilify .spofilify-player .player-controls .player-controls-buttons svg path:hover {
+  color: white;
+}
+.spofilify .spofilify-player .player-controls .player-timer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: transparent;
+}
+.spofilify .spofilify-player .player-controls .player-timer span {
+  margin: 0px 10px 0px 10px;
+  font-size: 12px;
+  color: #b4b4b3;
+  background-color: transparent;
+}
+.spofilify .spofilify-player .player-controls .player-timer .player-track {
+  height: 0.2rem;
+  min-width: 13em;
+  width: 100%;
+  background: rgba(59, 59, 59, 0.1);
+  border-radius: 0.25rem;
+}
+.spofilify .spofilify-player .player-controls .player-timer .player-track .player-knob {
+  position: absolute;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background: #b4b4b3;
+  transform: translate(-25%, -35%);
+}
+.spofilify .spofilify-player .player-controls .player-timer .player-track .player-knob:hover {
+  cursor: pointer;
+}
+.spofilify .player-right-controls {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: transparent;
+}
+.spofilify .player-right-controls .player-right-controls-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: transparent;
+}
+@media only screen and (max-width: 900px) {
+  .spofilify .player-right-controls .player-right-controls-buttons .player-right-controls-dissapear {
+    display: none;
+  }
+}
+.spofilify .player-right-controls .player-right-controls-buttons svg {
+  background-color: transparent;
+  font-size: 18px;
+  padding: 8px;
+}
+.spofilify .player-right-controls .player-right-controls-buttons svg path {
+  color: #b4b4b3;
+}
+.spofilify .player-right-controls .player-right-controls-buttons svg path:hover {
+  color: white;
+}
+.spofilify .player-right-controls .player-right-controls-buttons .volume-track {
+  height: 0.2rem;
+  min-width: 5em;
+  background: rgba(59, 59, 59, 0.1);
+  border-radius: 0.25rem;
+}
+.spofilify .player-right-controls .player-right-controls-buttons .volume-track .volume-knob {
+  position: absolute;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background: #b4b4b3;
+  transform: translate(-25%, -35%);
+}
+.spofilify .player-right-controls .player-right-controls-buttons .volume-track .volume-knob:hover {
+  cursor: pointer;
+}

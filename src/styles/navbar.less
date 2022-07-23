@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #24252a;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+li,
+a,
+button,
+span {
+  color: #edf0f1;
+  text-decoration: none;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10%;
+  .App-logo {
+    cursor: pointer;
+    height: 50px;
+  }
+  .signature {
+    display: inline-flex;
+    text-align: left;
+    .my-name {
+      padding-left: 10px;
+    }
+  }
+  .nav-links {
+    margin-left: -10px;
+    list-style: none;
+    li {
+      display: inline-block;
+      padding: 0px 20px;
+      .nav-link {
+        transition: all 0.3s ease 0s;
+        &:hover {
+          color: #0088a9;
+        }
+      }
+    }
+    .hidden-li {
+      display: none;
+    }
+  }
+  #hidden-icon {
+    display: none;
+  }
+  button {
+    padding: 9px 25px;
+    background-color: rgb(0, 150, 187);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    &:hover {
+      background-color: rgba(0, 150, 187, 0.8);
+    }
+  }
+}
+.splitter {
+  height: 1px;
+  width: 100%;
+  background-color: black;
+}
+
+.hamburger-links {
+  display: none;
+}
+
+@media only screen and (max-width: 700px) {
+  .main-nav {
+    .nav-links {
+      display: none;
+    }
+    #nav-contact {
+      display: none;
+    }
+    #hidden-icon {
+      display: block;
+    }
+    .nav-burger {
+      height: 30px;
+      padding-left: 10px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  #display-hamburger-links {
+    display: block;
+  }
+  .hamburger-links {
+    padding-bottom: 20px;
+    li {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid black;
+    }
+  }
+}

@@ -1,0 +1,149 @@
+.flexgame {
+  margin: auto;
+  width: 60%;
+  padding-top: 10px;
+  user-select: none;
+}
+.flexgame h1 {
+  font-size: 20px;
+  padding-bottom: 5px;
+}
+.flexgame h2 {
+  font-size: 18px;
+  padding-top: 10px;
+}
+.flexgame .flex-direction {
+  display: flex;
+  border: 2px solid #0088a9;
+  border-radius: 10px;
+  padding: 5px;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+.flexgame .flex-direction #flx-row {
+  flex-direction: row;
+}
+.flexgame .flex-direction #flx-column {
+  flex-direction: column;
+}
+.flexgame .flex-direction:hover {
+  background-color: #00485a;
+}
+.flexgame .flex-direction div {
+  border: 1px solid #0088a9;
+  padding: 3px;
+  margin: 2px;
+  border-radius: 10px;
+  max-width: inherit;
+  width: 100%;
+  cursor: pointer;
+}
+.flexgame .flex-wrap {
+  display: flex;
+  border: 2px solid #0088a9;
+  border-radius: 10px;
+  padding: 5px;
+  transition: all 0.3s ease 0s;
+  flex-wrap: nowrap;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.flexgame .flex-wrap:hover {
+  background-color: #00485a;
+}
+.flexgame .flex-wrap div {
+  border: 1px solid #0088a9;
+  padding: 3px;
+  margin: 2px;
+  border-radius: 10px;
+  max-width: inherit;
+  width: calc(25% - 5px);
+  cursor: pointer;
+}
+@media only screen and (max-width: 555px) {
+  .flexgame .flex-wrap div {
+    width: 35px;
+  }
+}
+.flexgame .justify-content {
+  display: flex;
+  border: 2px solid #0088a9;
+  border-radius: 10px;
+  padding: 5px;
+  transition: all 0.3s ease 0s;
+  flex-wrap: nowrap;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.flexgame .justify-content:hover {
+  background-color: #00485a;
+}
+.flexgame .justify-content div {
+  border: 1px solid #0088a9;
+  padding: 3px;
+  margin: 2px;
+  border-radius: 10px;
+  max-width: inherit;
+  width: calc(25% - 5px);
+  cursor: pointer;
+}
+.flexgame .align-items {
+  display: flex;
+  border: 2px solid #0088a9;
+  border-radius: 10px;
+  padding: 5px;
+  transition: all 0.3s ease 0s;
+  box-sizing: border-box;
+  height: 8rem;
+  align-items: flex-start;
+  cursor: pointer;
+}
+.flexgame .align-items:hover {
+  background-color: #00485a;
+}
+.flexgame .align-items div {
+  border: 1px solid #0088a9;
+  margin: 2px;
+  border-radius: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.flexgame .align-content {
+  display: flex;
+  border: 2px solid #0088a9;
+  border-radius: 10px;
+  padding: 5px;
+  transition: all 0.3s ease 0s;
+  box-sizing: border-box;
+  height: 8rem;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  cursor: pointer;
+}
+.flexgame .align-content:hover {
+  background-color: #00485a;
+}
+.flexgame .align-content div {
+  border: 1px solid #0088a9;
+  margin: 2px;
+  border-radius: 10px;
+  padding: 3px;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+@media only screen and (max-width: 1000px) {
+  .flexgame .align-content {
+    height: 12rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .flexgame .align-content {
+    height: 20rem;
+  }
+}

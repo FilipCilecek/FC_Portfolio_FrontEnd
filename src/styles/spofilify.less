@@ -1,0 +1,565 @@
+@black: rgb(0, 0, 0);
+@black-50opacity: rgba(0, 0, 0, 0.5);
+@white: rgb(255, 255, 255);
+@nav-gray-text: rgb(180, 180, 179);
+@gray-border: rgb(122, 122, 122);
+@body-color: #121212;
+@body-highligt: #1a1a1a;
+@login-menu-background: #1e2122;
+@recommended-red: #220507;
+@recommended-black: #121212;
+@green-play-button: rgb(0, 196, 65);
+@player-background: #121414;
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+.spofilify {
+  background-color: @body-color;
+  user-select: none;
+  display: grid;
+  grid-template-columns: 240px auto;
+  grid-template-rows: 64px 268px auto 91px;
+  height: calc(100vh - 81px);
+  grid-template-areas:
+    'sidebar header'
+    'sidebar main'
+    'sidebar main'
+    'player player';
+  overflow: hidden;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  @media only screen and (max-width: 1200px) {
+    grid-template-rows: 64px 238px auto 91px;
+  }
+  @media only screen and (max-width: 1050px) {
+    grid-template-rows: 64px 203px auto 91px;
+  }
+  @media only screen and (max-width: 690px) {
+    grid-template-rows: 64px 218px auto 91px;
+  }
+  // LEFT NAVBAR ---------------------
+  .left-navbar {
+    grid-area: sidebar;
+    background-color: @black;
+    color: @nav-gray-text;
+    height: 100%;
+    width: 240px;
+    position: fixed;
+    left: 0;
+    padding: 20px;
+    text-align: left;
+    .left-navbar-logo {
+      background-color: @black;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      height: 50px;
+      width: 100%;
+      font-size: 25px;
+      div {
+        background-color: @black;
+        margin-left: 5px;
+      }
+      svg {
+        background-color: @black;
+        font-size: 40px;
+      }
+    }
+    .nav-links {
+      background-color: @black;
+      padding-top: 30px;
+      .nav-link {
+        background-color: @black;
+        font-size: 15px;
+        padding-bottom: 22px;
+        a {
+          background-color: @black;
+          color: @nav-gray-text;
+          display: flex;
+          align-items: center;
+          &:hover path {
+            color: @white;
+            transition: all 0.5s ease 0s;
+          }
+          &:hover span {
+            color: @white;
+            transition: all 0.5s ease 0s;
+          }
+          svg {
+            background-color: @black;
+            margin-right: 15px;
+            height: 25px;
+            width: 25px;
+            path {
+              color: @nav-gray-text;
+              transition: all 0.5s ease 0s;
+            }
+          }
+          span {
+            background-color: @black;
+            color: @nav-gray-text;
+            transition: all 0.5s ease 0s;
+          }
+        }
+      }
+    }
+    hr {
+      height: 1px;
+      border: none;
+      margin-bottom: 20px;
+    }
+    .nav-playlists {
+      li {
+        list-style: none;
+        font-size: 14px;
+        background-color: @black;
+        color: @nav-gray-text;
+        padding-bottom: 10px;
+        &:hover {
+          color: @white;
+        }
+      }
+    }
+  }
+  // END OF LEFT NAVBAR -----------
+  // HEADER -----------------------
+  #spofilify-header {
+    grid-area: header;
+    background-color: @recommended-red;
+    width: 100%;
+    overflow: hidden;
+    height: 64px;
+    padding: 16px 32px;
+    position: sticky;
+    .header-buttons {
+      text-align: left;
+      .header-button-left {
+        background-color: @black-50opacity;
+        height: 32px;
+        width: 32px;
+        border-radius: 16px;
+        font-size: 18px;
+        border: none;
+        float: left;
+        margin-left: 15px;
+        cursor: pointer;
+        &:nth-child(2) {
+          margin-left: 15px;
+        }
+        svg {
+          background-color: transparent;
+          path {
+            color: @nav-gray-text;
+          }
+        }
+      }
+      #buttons-right {
+        float: right;
+        display: flex;
+        background-color: transparent;
+        #upgrade-button {
+          background-color: transparent;
+          margin-right: 20px;
+          border: 1px solid @nav-gray-text;
+          border-radius: 15px;
+          padding: 5px 12px;
+          transition: all 0.3s ease 0s;
+          &:hover {
+            background-color: @black;
+            border: 1px solid @gray-border;
+          }
+          @media only screen and (max-width: 690px) {
+            display: none;
+          }
+        }
+        #login-button {
+          border: none;
+          border-radius: 15px;
+          background-color: @black;
+          padding: 2px;
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+          gap: 8px;
+          span {
+            background-color: @black;
+          }
+          figure {
+            height: 28px;
+            width: 28px;
+            border-radius: 15px;
+            img {
+              height: 28px;
+              width: 28px;
+              border-radius: 15px;
+              object-fit: cover;
+            }
+          }
+          svg {
+            background-color: transparent;
+            height: 16px;
+            width: 16px;
+            margin-right: 5px;
+          }
+          &:hover {
+            background-color: @body-highligt;
+            span {
+              background-color: @body-highligt;
+            }
+          }
+        }
+      }
+    }
+  }
+  #login-menu {
+    grid-area: recommended;
+    position: absolute;
+    z-index: 99;
+    inset: 0px 0px auto auto;
+    background-color: @login-menu-background;
+    transform: translate(-32px, 140px);
+    ul {
+      padding: 5px;
+      li {
+        list-style: none;
+        .login-menu-button {
+          text-align: left;
+          border: none;
+          padding: 10px;
+          font-size: 14px;
+          width: 100%;
+        }
+      }
+    }
+  }
+  // END OF HEADER -----------
+  // RECOMMENDED -----------
+  .main-content {
+    grid-area: main;
+    overflow: auto;
+    background-color: @body-color;
+    .spofilify-recommended {
+      grid-area: main;
+      background-color: transparent;
+      background-image: linear-gradient(@recommended-red, @recommended-black);
+      padding: 0px 30px;
+      h1 {
+        text-align: left;
+        background-color: transparent;
+        margin-bottom: 15px;
+      }
+      .recommended-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        background-color: transparent;
+        gap: 10px;
+        .recommended-item {
+          background-color: transparent;
+          display: flex;
+          align-items: center;
+          position: relative;
+          border-radius: 0px 10px 10px 0px;
+          &:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+            :nth-child(3) {
+              opacity: 1;
+              height: 40px;
+              transform: translate(-50%, -50%);
+              @media only screen and (max-width: 1200px) {
+                height: 35px;
+              }
+              @media only screen and (max-width: 1050px) {
+                height: 30px;
+              }
+              @media only screen and (max-width: 950px) {
+                height: 0px;
+              }
+              path {
+                height: 40px;
+              }
+            }
+          }
+          img {
+            height: 6em; //90px
+            border-radius: 0.5rem 0rem 0rem 0.5rem;
+          }
+          span {
+            margin-left: 15px;
+            background-color: transparent;
+            float: left;
+            padding: 7px;
+          }
+          svg {
+            height: 1px;
+            opacity: 0;
+            position: absolute;
+            left: 85%;
+            top: 50%;
+            transform: translate(-50%, -30%);
+            font-size: 40px;
+            background-color: transparent;
+            float: right;
+            transition: opacity 0.5s ease-out;
+            transition: transform 0.5s ease-out;
+            path {
+              color: @green-play-button;
+              height: 0;
+            }
+          }
+          @media only screen and (max-width: 1200px) {
+            span {
+              font-size: 14px;
+              margin-left: 10px;
+            }
+            img {
+              height: 5em;
+            }
+          }
+          @media only screen and (max-width: 1050px) {
+            span {
+              font-size: 14px;
+              margin-left: 5px;
+            }
+            img {
+              height: 4em;
+            }
+          }
+        }
+      }
+    }
+    // END OF RECOMMENDED -----------
+    // MAIN -----------
+    .spofilify-main {
+      grid-area: main;
+      padding: 0px 30px;
+      background-color: @body-color;
+      height: 100%;
+      h1 {
+        text-align: left;
+        background-color: transparent;
+        padding: 15px 0px 15px 0px;
+        font-size: 1.5em;
+      }
+      .spofilify-main-row {
+        display: flex;
+        gap: 15px;
+        background-color: transparent;
+        .spofilify-main-row-item {
+          max-width: 240px;
+          max-height: 320px;
+          background-color: @body-highligt;
+          display: inline-block;
+          position: relative;
+          transition: all 0.5s ease-out;
+          //padding: 20px;
+          &:hover {
+            background-color: @login-menu-background;
+            svg {
+              opacity: 1;
+              height: 40px;
+              transform: translate(0%, -15%);
+              @media only screen and (max-width: 1200px) {
+                height: 35px;
+              }
+              @media only screen and (max-width: 1050px) {
+                height: 30px;
+              }
+              @media only screen and (max-width: 950px) {
+                height: 0px;
+              }
+              path {
+                height: 40px;
+              }
+            }
+          }
+
+          img {
+            height: 11em;
+            border-radius: 5px;
+            margin: 18px 18px 5px 18px;
+          }
+          h2 {
+            background-color: transparent;
+            font-size: 1rem;
+            margin: 0px 18px 0px 18px;
+            text-align: left;
+          }
+          svg {
+            height: 1px;
+            opacity: 0;
+            position: absolute;
+            left: 66%;
+            top: 52%;
+            background-color: transparent;
+            transition: opacity 0.5s ease-out;
+            transition: transform 0.5s ease-out;
+            path {
+              color: @green-play-button;
+              height: 0;
+            }
+          }
+          div {
+            color: @nav-gray-text;
+            background-color: transparent;
+            max-width: fit-content;
+            max-height: 2em;
+            line-height: 1em;
+            font-size: 0.8rem;
+            margin: 5px 18px 18px 18px;
+            white-space: normal;
+            overflow: hidden;
+            text-align: left;
+          }
+        }
+      }
+    }
+    // END OF MAIN -----------
+  }
+
+  // PLAYER -----------
+  .spofilify-player {
+    grid-area: player;
+    position: sticky;
+    background-color: @player-background;
+    border-top: 1px gray solid;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 16px 0px 16px;
+    .playing {
+      display: flex;
+      align-items: center;
+      background-color: transparent;
+      width: 20%;
+      img {
+        height: 56px;
+      }
+      #playing-info {
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        margin: 0px 14px 0px 14px;
+        h1 {
+          background-color: transparent;
+          font-size: 13px;
+        }
+        span {
+          background-color: transparent;
+          color: @nav-gray-text;
+          font-size: 10px;
+        }
+      }
+      svg {
+        background-color: transparent;
+        padding: 10px;
+        @media only screen and (max-width: 900px) {
+          display: none;
+        }
+      }
+    }
+    .player-controls {
+      width: 40%;
+      min-width: 290px;
+      background-color: transparent;
+      .player-controls-buttons {
+        margin-top: 5px;
+        background-color: transparent;
+        svg {
+          background-color: transparent;
+          font-size: 18px;
+          padding: 18px 18px 12px 18px;
+          path {
+            color: @nav-gray-text;
+            &:hover {
+              color: white;
+            }
+          }
+        }
+      }
+      .player-timer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: transparent;
+        span {
+          margin: 0px 10px 0px 10px;
+          font-size: 12px;
+          color: @nav-gray-text;
+          background-color: transparent;
+        }
+        .player-track {
+          height: 0.2rem;
+          min-width: 13em;
+          width: 100%;
+          background: rgba(rgb(59, 59, 59), 0.1);
+          border-radius: 0.25rem;
+          .player-knob {
+            position: absolute;
+            width: 0.7rem;
+            height: 0.7rem;
+            border-radius: 50%;
+            background: @nav-gray-text;
+            transform: translate(-25%, -35%);
+            &:hover {
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+  .player-right-controls {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: transparent;
+    .player-right-controls-buttons {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      background-color: transparent;
+      .player-right-controls-dissapear {
+        @media only screen and (max-width: 900px) {
+          display: none;
+        }
+      }
+      svg {
+        background-color: transparent;
+        font-size: 18px;
+        padding: 8px;
+        path {
+          color: @nav-gray-text;
+          &:hover {
+            color: white;
+          }
+        }
+      }
+      .volume-track {
+        height: 0.2rem;
+        min-width: 5em;
+        background: rgba(rgb(59, 59, 59), 0.1);
+        border-radius: 0.25rem;
+        .volume-knob {
+          position: absolute;
+          width: 0.7rem;
+          height: 0.7rem;
+          border-radius: 50%;
+          background: @nav-gray-text;
+          transform: translate(-25%, -35%);
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

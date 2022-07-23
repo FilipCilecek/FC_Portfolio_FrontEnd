@@ -1,0 +1,26 @@
+.projects button {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 5px;
+  padding: 5px 10px;
+  background-color: #24252a;
+  border: 1px solid #0096bb;
+  border-radius: 10px;
+  margin-top: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+.projects button svg {
+  transition: all 0.3s ease 0s;
+  padding-left: 5px;
+  height: 25px;
+}
+.projects button:hover {
+  background-color: #313236;
+}
+.projects button:hover svg {
+  background-color: #313236;
+}
+.functional-buttons svg {
+  padding-right: 5px;
+}

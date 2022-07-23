@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #24252a;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+li,
+a,
+button,
+span {
+  color: #edf0f1;
+  text-decoration: none;
+}
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10%;
+}
+.main-nav .App-logo {
+  cursor: pointer;
+  height: 50px;
+}
+.main-nav .signature {
+  display: inline-flex;
+  text-align: left;
+}
+.main-nav .signature .my-name {
+  padding-left: 10px;
+}
+.main-nav .nav-links {
+  margin-left: -10px;
+  list-style: none;
+}
+.main-nav .nav-links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+.main-nav .nav-links li .nav-link {
+  transition: all 0.3s ease 0s;
+}
+.main-nav .nav-links li .nav-link:hover {
+  color: #0088a9;
+}
+.main-nav .nav-links .hidden-li {
+  display: none;
+}
+.main-nav #hidden-icon {
+  display: none;
+}
+.main-nav button {
+  padding: 9px 25px;
+  background-color: #0096bb;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+.main-nav button:hover {
+  background-color: rgba(0, 150, 187, 0.8);
+}
+.splitter {
+  height: 1px;
+  width: 100%;
+  background-color: black;
+}
+.hamburger-links {
+  display: none;
+}
+@media only screen and (max-width: 700px) {
+  .main-nav .nav-links {
+    display: none;
+  }
+  .main-nav #nav-contact {
+    display: none;
+  }
+  .main-nav #hidden-icon {
+    display: block;
+  }
+  .main-nav .nav-burger {
+    height: 30px;
+    padding-left: 10px;
+  }
+  .main-nav .nav-burger:hover {
+    cursor: pointer;
+  }
+  #display-hamburger-links {
+    display: block;
+  }
+  .hamburger-links {
+    padding-bottom: 20px;
+  }
+  .hamburger-links li {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid black;
+  }
+}

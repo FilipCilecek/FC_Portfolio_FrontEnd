@@ -1,0 +1,153 @@
+@react-blue: #0088a9;
+@react-blue-darker: #00485a;
+
+.flexgame {
+  margin: auto;
+  width: 60%;
+  padding-top: 10px;
+  user-select: none;
+  h1 {
+    font-size: 20px;
+    padding-bottom: 5px;
+  }
+  h2 {
+    font-size: 18px;
+    padding-top: 10px;
+  }
+  // FLEX-DIRECTION
+  .flex-direction {
+    display: flex;
+    border: 2px solid @react-blue;
+    border-radius: 10px;
+    padding: 5px;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    #flx-row {
+      flex-direction: row;
+    }
+    #flx-column {
+      flex-direction: column;
+    }
+    &:hover {
+      background-color: @react-blue-darker;
+    }
+    div {
+      border: 1px solid @react-blue;
+      padding: 3px;
+      margin: 2px;
+      border-radius: 10px;
+      max-width: inherit;
+      width: 100%;
+      cursor: pointer;
+    }
+  }
+  // FLEX-WRAP
+  .flex-wrap {
+    display: flex;
+    border: 2px solid @react-blue;
+    border-radius: 10px;
+    padding: 5px;
+    transition: all 0.3s ease 0s;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+    cursor: pointer;
+    &:hover {
+      background-color: @react-blue-darker;
+    }
+    div {
+      border: 1px solid @react-blue;
+      padding: 3px;
+      margin: 2px;
+      border-radius: 10px;
+      max-width: inherit;
+      width: calc(25% - 5px);
+      cursor: pointer;
+    }
+    @media only screen and (max-width: 555px) {
+      div {
+        width: 35px;
+      }
+    }
+  }
+  // JUSTIFY-CONTENT
+  .justify-content {
+    display: flex;
+    border: 2px solid @react-blue;
+    border-radius: 10px;
+    padding: 5px;
+    transition: all 0.3s ease 0s;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+    cursor: pointer;
+    &:hover {
+      background-color: @react-blue-darker;
+    }
+    div {
+      border: 1px solid @react-blue;
+      padding: 3px;
+      margin: 2px;
+      border-radius: 10px;
+      max-width: inherit;
+      width: calc(25% - 5px);
+      cursor: pointer;
+    }
+  }
+  // ALIGN-ITEMS
+  .align-items {
+    display: flex;
+    border: 2px solid @react-blue;
+    border-radius: 10px;
+    padding: 5px;
+    transition: all 0.3s ease 0s;
+    box-sizing: border-box;
+    height: 8rem;
+    align-items: flex-start; // Aligning here
+    cursor: pointer;
+    &:hover {
+      background-color: @react-blue-darker;
+    }
+    div {
+      border: 1px solid @react-blue;
+      margin: 2px;
+      border-radius: 10px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+  }
+  // ALIGN-CONTENT
+  .align-content {
+    display: flex;
+    border: 2px solid @react-blue;
+    border-radius: 10px;
+    padding: 5px;
+    transition: all 0.3s ease 0s;
+    box-sizing: border-box;
+    height: 8rem;
+    flex-wrap: wrap;
+    align-content: flex-start; // Aligning here
+    cursor: pointer;
+    &:hover {
+      background-color: @react-blue-darker;
+    }
+    div {
+      border: 1px solid @react-blue;
+      margin: 2px;
+      border-radius: 10px;
+      padding: 3px;
+      width: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+    @media only screen and (max-width: 1000px) {
+      height: 12rem;
+    }
+    @media only screen and (max-width: 600px) {
+      height: 20rem;
+    }
+  }
+}
