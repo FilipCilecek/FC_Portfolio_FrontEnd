@@ -12,15 +12,17 @@ const Navbar = () => {
   return (
     <>
       <header className='main-nav'>
-        <div className='signature'>
-          <img src={logo} className='App-logo' alt='logo' />
-          <div className='my-name'>
-            <span>Filip</span>
-            <br></br>
-            <span>Cileček</span>
+        <Link to='/'>
+          <div className='signature'>
+            <img src={logo} className='App-logo' alt='logo' />
+            <div className='my-name'>
+              <span>Filip</span>
+              <br></br>
+              <span>Cileček</span>
+            </div>
           </div>
-        </div>
-        <nav>
+        </Link>
+        <nav className='main-nav-links'>
           <ul className='nav-links'>
             <li>
               <Link to='/projekty'>Projekty</Link>
@@ -42,10 +44,10 @@ const Navbar = () => {
                 : setIsHamburgerOpen(true);
             }}
           />
+          <Link to='/kontakt' id='nav-contact'>
+            <button>Životopis</button>
+          </Link>
         </nav>
-        <Link to='/kontakt' id='nav-contact'>
-          <button>Kontakt</button>
-        </Link>
       </header>
 
       <div className='splitter'></div>
@@ -64,7 +66,7 @@ const Navbar = () => {
           <Link to='/about-me'>About me</Link>
         </li>
         <li>
-          <Link to='/kontakt'>Kontakt</Link>
+          <Link to='/kontakt'>Životopis</Link>
         </li>
       </ul>
     </>

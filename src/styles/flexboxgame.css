@@ -14,7 +14,7 @@
 }
 .flexgame .flex-direction {
   display: flex;
-  border: 2px solid #0088a9;
+  border: 2px solid #00a2ca;
   border-radius: 10px;
   padding: 5px;
   transition: all 0.3s ease 0s;
@@ -30,7 +30,7 @@
   background-color: #00485a;
 }
 .flexgame .flex-direction div {
-  border: 1px solid #0088a9;
+  border: 1px solid #00a2ca;
   padding: 3px;
   margin: 2px;
   border-radius: 10px;
@@ -40,7 +40,7 @@
 }
 .flexgame .flex-wrap {
   display: flex;
-  border: 2px solid #0088a9;
+  border: 2px solid #00a2ca;
   border-radius: 10px;
   padding: 5px;
   transition: all 0.3s ease 0s;
@@ -52,7 +52,7 @@
   background-color: #00485a;
 }
 .flexgame .flex-wrap div {
-  border: 1px solid #0088a9;
+  border: 1px solid #00a2ca;
   padding: 3px;
   margin: 2px;
   border-radius: 10px;
@@ -67,7 +67,7 @@
 }
 .flexgame .justify-content {
   display: flex;
-  border: 2px solid #0088a9;
+  border: 2px solid #00a2ca;
   border-radius: 10px;
   padding: 5px;
   transition: all 0.3s ease 0s;
@@ -79,7 +79,7 @@
   background-color: #00485a;
 }
 .flexgame .justify-content div {
-  border: 1px solid #0088a9;
+  border: 1px solid #00a2ca;
   padding: 3px;
   margin: 2px;
   border-radius: 10px;
@@ -89,7 +89,7 @@
 }
 .flexgame .align-items {
   display: flex;
-  border: 2px solid #0088a9;
+  border: 2px solid #00a2ca;
   border-radius: 10px;
   padding: 5px;
   transition: all 0.3s ease 0s;
@@ -102,7 +102,7 @@
   background-color: #00485a;
 }
 .flexgame .align-items div {
-  border: 1px solid #0088a9;
+  border: 1px solid #00a2ca;
   margin: 2px;
   border-radius: 10px;
   width: 100%;
@@ -113,7 +113,7 @@
 }
 .flexgame .align-content {
   display: flex;
-  border: 2px solid #0088a9;
+  border: 2px solid #00a2ca;
   border-radius: 10px;
   padding: 5px;
   transition: all 0.3s ease 0s;
@@ -127,7 +127,7 @@
   background-color: #00485a;
 }
 .flexgame .align-content div {
-  border: 1px solid #0088a9;
+  border: 1px solid #00a2ca;
   margin: 2px;
   border-radius: 10px;
   padding: 3px;

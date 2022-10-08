@@ -1,0 +1,89 @@
+.home-main {
+  padding: 0 150px;
+  overflow: hidden;
+}
+@media only screen and (max-width: 1220px) {
+  .home-main {
+    padding: 0px 100px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .home-main {
+    padding: 0px 50px;
+  }
+}
+.home-main .interduce {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex: 1;
+  overflow: auto;
+}
+@media only screen and (max-height: 880px) {
+  .home-main .interduce {
+    min-height: 89vh;
+  }
+}
+@media only screen and (max-height: 800px) {
+  .home-main .interduce {
+    min-height: 88vh;
+  }
+}
+@media only screen and (max-height: 730px) {
+  .home-main .interduce {
+    min-height: 87vh;
+  }
+}
+@media only screen and (max-height: 680px) {
+  .home-main .interduce {
+    min-height: 86vh;
+  }
+}
+.home-main .interduce :nth-child(2) {
+  color: #e4eafc;
+}
+.home-main .interduce h1 {
+  font-size: clamp(40px, 7vw, 80px);
+  font-weight: 600;
+  color: #acb4cc;
+  text-align: left;
+}
+.home-main .interduce h2 {
+  font-size: 1rem;
+  color: #00a2ca;
+  font-family: 'Roboto Mono', monospace;
+  padding-bottom: 15px;
+}
+.home-main .interduce p {
+  max-width: 50%;
+  text-align: left;
+  color: #acb4cc;
+  padding-top: 15px;
+}
+@media only screen and (max-width: 1220px) {
+  .home-main .interduce p {
+    max-width: 70%;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .home-main .interduce p {
+    max-width: 90%;
+  }
+}
+.home-main .interduce button {
+  padding: 12px 40px;
+  background-color: transparent;
+  border: 1px solid #00a2ca;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  font-family: 'Roboto Mono', monospace;
+  margin-top: 20px;
+}
+.home-main .interduce button:hover {
+  background-color: #0087a91c;
+}

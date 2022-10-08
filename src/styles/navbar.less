@@ -1,3 +1,6 @@
+@react-blue: #00a2ca;
+@button-hover: #0087a91c;
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -19,7 +22,7 @@ span {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 10%;
+  padding: 15px 5%;
   .App-logo {
     cursor: pointer;
     height: 50px;
@@ -29,37 +32,61 @@ span {
     text-align: left;
     .my-name {
       padding-left: 10px;
-    }
-  }
-  .nav-links {
-    margin-left: -10px;
-    list-style: none;
-    li {
-      display: inline-block;
-      padding: 0px 20px;
-      .nav-link {
-        transition: all 0.3s ease 0s;
-        &:hover {
-          color: #0088a9;
-        }
+      span {
+        font-family: 'Roboto Mono', monospace;
       }
     }
-    .hidden-li {
-      display: none;
+  }
+  .main-nav-links {
+    display: flex;
+    align-items: center;
+    .nav-links {
+      list-style: none;
+      counter-reset: nav-links;
+      font-size: 0.9rem;
+      padding-right: 10px;
+      li {
+        display: inline-block;
+        a {
+          font-family: 'Roboto Mono', monospace;
+          transition: all 0.2s ease 0s;
+          padding: 20px 25px;
+          &:hover {
+            color: @react-blue;
+          }
+          @media only screen and (max-width: 800px) {
+            padding: 20px 15px;
+          }
+        }
+        ::before {
+          content: '0' counter(nav-links) '_';
+          counter-increment: nav-links;
+          color: @react-blue;
+          font-size: 0.8rem;
+          padding-right: 1px;
+        }
+      }
+      .hidden-li {
+        display: none;
+      }
     }
-  }
-  #hidden-icon {
-    display: none;
-  }
-  button {
-    padding: 9px 25px;
-    background-color: rgb(0, 150, 187);
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-    &:hover {
-      background-color: rgba(0, 150, 187, 0.8);
+    #hidden-icon {
+      display: none;
+      @media only screen and (max-width: 700px) {
+        display: block;
+      }
+    }
+    button {
+      padding: 9px 25px;
+      background-color: transparent;
+      border: 1px solid @react-blue;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease 0s;
+      font-family: 'Roboto Mono', monospace;
+      &:hover {
+        background-color: @button-hover;
+      }
     }
   }
 }
@@ -81,9 +108,6 @@ span {
     #nav-contact {
       display: none;
     }
-    #hidden-icon {
-      display: block;
-    }
     .nav-burger {
       height: 30px;
       padding-left: 10px;
@@ -97,10 +121,21 @@ span {
   }
   .hamburger-links {
     padding-bottom: 20px;
+    counter-reset: nav-hamburger;
     li {
       padding-top: 15px;
       padding-bottom: 15px;
       border-bottom: 1px solid black;
+      a {
+        font-family: 'Roboto Mono', monospace;
+      }
+      ::before {
+        content: '0' counter(nav-hamburger) '_';
+        counter-increment: nav-hamburger;
+        color: @react-blue;
+        font-size: 0.8rem;
+        padding-right: 1px;
+      }
     }
   }
 }

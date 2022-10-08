@@ -10,7 +10,7 @@ import Inputsubmit from './global-components/Inputsubmit.js';
 const Input = styled.input`
   background: transparent;
   border-radius: 5px;
-  border: 1px solid #0088a9;
+  border: 1px solid #00a2ca;
   color: white;
   margin: 0.5em 0.2em;
   padding: 0.25em 1em;

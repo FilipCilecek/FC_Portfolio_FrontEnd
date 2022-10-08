@@ -55,9 +55,6 @@ body ::-webkit-scrollbar-thumb:hover {
   font-size: 18px;
   align-self: center;
 }
-.crypto-search-wrapper .crypto-search input[type='text']:focus {
-  border: 1px solid red;
-}
 .coin-wrapper {
   display: flex;
   justify-content: center;

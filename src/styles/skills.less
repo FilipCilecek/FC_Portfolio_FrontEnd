@@ -1,0 +1,105 @@
+@main-skill-font-size: clamp(18px, 3vw, 30px);
+@main-skill-i-size: clamp(35px, 4vw, 45px);
+@sec-skill-font-size: clamp(12px, 1.5vw, 25px);
+@sec-skill-i-size: clamp(30px, 3vw, 40px);
+@h1-font-size: clamp(20px, 2.5vw, 45px);
+@main-color: #e4eafc;
+@secondary-color: #acb4cc;
+@react-blue: #00a2ca;
+
+.skills-full {
+  display: grid;
+  grid-template-areas:
+    'border-top border-top border-top border-top border-top'
+    'border-left main main right-top border-right'
+    'border-left left-bottom secondary secondary border-right'
+    'border-bottom border-bottom border-bottom border-bottom border-bottom';
+  grid-template-columns: 10% 1fr 1fr 1fr 10%; //10% 26% auto 26% 10%;
+  grid-template-rows: 10% 40% 40% 10%;
+  height: calc(100vh - 88px);
+  background: linear-gradient(
+    175deg,
+    rgba(36, 37, 42, 1) 50%,
+    rgba(9, 9, 121, 1) 50%,
+    rgba(0, 135, 169, 0.11) 50%
+  );
+  @media only screen and (max-width: 1000px) {
+    grid-template-areas:
+      'border-top border-top border-top border-top border-top'
+      'border-left main main main border-right'
+      'border-left secondary secondary secondary border-right'
+      'border-bottom border-bottom border-bottom border-bottom border-bottom';
+  }
+  .skills-main {
+    grid-area: main;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h1 {
+      font-size: @h1-font-size;
+      background-color: transparent;
+      color: @main-color;
+    }
+    .skills {
+      display: flex;
+      justify-content: center;
+      justify-content: space-around;
+      margin-top: 15px;
+      background-color: transparent;
+      .skill {
+        background-color: transparent;
+        h2 {
+          font-size: @main-skill-font-size;
+          background-color: transparent;
+          color: @main-color;
+        }
+        i {
+          font-size: @main-skill-i-size;
+          background-color: transparent;
+          color: @main-color;
+        }
+      }
+    }
+  }
+  .skills-secondary {
+    grid-area: secondary;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    h1 {
+      font-size: @h1-font-size;
+      background-color: transparent;
+      color: @main-color;
+    }
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      background-color: transparent;
+      .skill {
+        min-width: 15%;
+        margin: 10px auto;
+        background-color: transparent;
+        h2 {
+          font-size: @sec-skill-font-size;
+          background-color: transparent;
+          color: @main-color;
+        }
+        i {
+          font-size: @sec-skill-i-size;
+          background-color: transparent;
+          color: @main-color;
+        }
+        svg {
+          font-size: @sec-skill-i-size;
+          background-color: transparent;
+          path {
+            color: @main-color;
+          }
+        }
+      }
+    }
+  }
+}

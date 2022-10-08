@@ -1,0 +1,85 @@
+.skills-full {
+  display: grid;
+  grid-template-areas: 'border-top border-top border-top border-top border-top' 'border-left main main right-top border-right' 'border-left left-bottom secondary secondary border-right' 'border-bottom border-bottom border-bottom border-bottom border-bottom';
+  grid-template-columns: 10% 1fr 1fr 1fr 10%;
+  grid-template-rows: 10% 40% 40% 10%;
+  height: calc(100vh - 88px);
+  background: linear-gradient(175deg, #24252a 50%, #090979 50%, rgba(0, 135, 169, 0.11) 50%);
+}
+@media only screen and (max-width: 1000px) {
+  .skills-full {
+    grid-template-areas: 'border-top border-top border-top border-top border-top' 'border-left main main main border-right' 'border-left secondary secondary secondary border-right' 'border-bottom border-bottom border-bottom border-bottom border-bottom';
+  }
+}
+.skills-full .skills-main {
+  grid-area: main;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.skills-full .skills-main h1 {
+  font-size: clamp(20px, 2.5vw, 45px);
+  background-color: transparent;
+  color: #e4eafc;
+}
+.skills-full .skills-main .skills {
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  margin-top: 15px;
+  background-color: transparent;
+}
+.skills-full .skills-main .skills .skill {
+  background-color: transparent;
+}
+.skills-full .skills-main .skills .skill h2 {
+  font-size: clamp(18px, 3vw, 30px);
+  background-color: transparent;
+  color: #e4eafc;
+}
+.skills-full .skills-main .skills .skill i {
+  font-size: clamp(35px, 4vw, 45px);
+  background-color: transparent;
+  color: #e4eafc;
+}
+.skills-full .skills-secondary {
+  grid-area: secondary;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.skills-full .skills-secondary h1 {
+  font-size: clamp(20px, 2.5vw, 45px);
+  background-color: transparent;
+  color: #e4eafc;
+}
+.skills-full .skills-secondary .skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: transparent;
+}
+.skills-full .skills-secondary .skills .skill {
+  min-width: 15%;
+  margin: 10px auto;
+  background-color: transparent;
+}
+.skills-full .skills-secondary .skills .skill h2 {
+  font-size: clamp(12px, 1.5vw, 25px);
+  background-color: transparent;
+  color: #e4eafc;
+}
+.skills-full .skills-secondary .skills .skill i {
+  font-size: clamp(30px, 3vw, 40px);
+  background-color: transparent;
+  color: #e4eafc;
+}
+.skills-full .skills-secondary .skills .skill svg {
+  font-size: clamp(30px, 3vw, 40px);
+  background-color: transparent;
+}
+.skills-full .skills-secondary .skills .skill svg path {
+  color: #e4eafc;
+}
