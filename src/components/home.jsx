@@ -22,7 +22,7 @@ function Home() {
             <button>About me page</button>
           </Link>
         </section>
-        <Divnextpage text={'Znalosti'}></Divnextpage>
+        <Divnextpage page={'projekty'}></Divnextpage>
       </main>
     </>
   );

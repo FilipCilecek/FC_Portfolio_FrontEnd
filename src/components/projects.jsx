@@ -23,6 +23,7 @@ import img_compound from '../images/projects/compound.jpg';
 import img_flex from '../images/projects/flex.jpg';
 import img_spofilify from '../images/projects/spofilify.jpg';
 import img_crypto from '../images/projects/crypto.jpg';
+import Btnback from './global-components/Btnback.js';
 
 // Compound interest calculator
 function Projects() {
@@ -163,10 +164,11 @@ function Projects() {
   } else {
     rndr = (
       <div className='functional-buttons'>
-        <button onClick={() => setProject(null)}>
+        {/*<button onClick={() => setProject(null)}>
           <FontAwesomeIcon icon={faArrowLeft} />
           Zpátky
-        </button>
+    </button>*/}
+        <Btnback setProject={() => setProject(null)}></Btnback>
       </div>
     );
   }

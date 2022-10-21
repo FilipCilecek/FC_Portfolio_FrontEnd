@@ -7,9 +7,10 @@
   --grid-item--max-width: calc((100% - var(--total-gap-width)) / var(--grid-column-count));
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(max(var(--grid-item--min-width), var(--grid-item--max-width)), 1fr));
-  height: 100vh;
+  height: 90vh;
   padding: 3%;
   gap: 10px;
+  background: linear-gradient(170deg, #24252a 70%, #090979 70%, rgba(0, 135, 169, 0.11) 50%);
 }
 .projects .project {
   display: flex;

@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 /*
 @name-color: #e4eafc;
@@ -17,6 +18,7 @@ const Div = styled.div`
   height: 15vw;
   width: 15vw;
   transition: all 0.2s ease 0s;
+  cursor: pointer;
   @media only screen and (max-width: 700px) {
     right: -11vw;
     height: 18vw;
@@ -54,11 +56,14 @@ const Div = styled.div`
   }
 `;
 
-const Divnextpage = ({ text, handleChange }) => {
+const Divnextpage = ({ page, handleChange }) => {
+  let full_link = '/' + page;
   return (
-    <Div onChange={handleChange}>
-      <FontAwesomeIcon icon={faAngleRight}></FontAwesomeIcon>
-    </Div>
+    <Link to={full_link}>
+      <Div onChange={handleChange}>
+        <FontAwesomeIcon icon={faAngleRight}></FontAwesomeIcon>
+      </Div>
+    </Link>
   );
 };
 
