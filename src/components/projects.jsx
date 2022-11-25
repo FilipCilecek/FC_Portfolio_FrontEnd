@@ -23,7 +23,9 @@ import img_compound from '../images/projects/compound.jpg';
 import img_flex from '../images/projects/flex.jpg';
 import img_spofilify from '../images/projects/spofilify.jpg';
 import img_crypto from '../images/projects/crypto.jpg';
+import img_component from '../images/projects/component.jpg';
 import Btnback from './global-components/Btnback.js';
+import Componentpack from './componentpack.jsx';
 
 // Compound interest calculator
 function Projects() {
@@ -109,6 +111,30 @@ function Projects() {
             </div>
           </div>
           <div className='project'>
+            {/*Component pack*/}
+            <div
+              className='project-wrapper'
+              onClick={() => {
+                previousproject.current = project;
+                setProject('componentpack');
+              }}
+            >
+              <img src={img_component} alt='' draggable='false' />
+              <h1>Component pack</h1>
+              <div className='project-details'>
+                <div className='slider-header-wrapper'>
+                  <h1>Component pack</h1>
+                </div>
+                <p>
+                  Component pack udělaný pomocí styled-components. U tohoto
+                  menšího projektu jsem se snažil ukázání dovednosti s
+                  styled-components a dělání re-usable components.
+                </p>
+                <p>HTML, CSS - LESS, React, Styled Components</p>
+              </div>
+            </div>
+          </div>
+          <div className='project'>
             {/*Flexbox training*/}
             <div
               className='project-wrapper'
@@ -157,6 +183,12 @@ function Projects() {
               </div>
             </div>
           </div>
+          <div className='project hide1100'>
+            {/*Coming soon ...*/}
+            <div className='project-wrapper wrapper-flex' onClick={() => {}}>
+              <h1>Více projektů ve výrobě ...</h1>
+            </div>
+          </div>
         </div>
       </>
     );
@@ -178,6 +210,7 @@ function Projects() {
       <div className='wrapper'>{rndr}</div>
       {project === 'snake' && <Snake></Snake>}
       {project === 'compound' && <Compoundcalc></Compoundcalc>}
+      {project === 'componentpack' && <Componentpack></Componentpack>}
       {project === 'flexboxgame' && <Flexboxgame></Flexboxgame>}
       {project === 'spofilify' && (
         <Spofilify stateChanger={setProject}></Spofilify>

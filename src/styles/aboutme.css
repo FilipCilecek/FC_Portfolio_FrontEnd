@@ -1,0 +1,102 @@
+.about-me {
+  display: grid;
+  font-size: clamp(1rem, 1.3vw, 1.2rem);
+  padding: 1vh;
+  background: linear-gradient(190deg, #24252a 50%, #090979 50%, rgba(0, 135, 169, 0.11) 40%);
+}
+.about-me .first-section,
+.about-me .second-section,
+.about-me .section-text,
+.about-me .img-wrapper {
+  background-color: transparent;
+}
+.about-me .first-image {
+  margin-top: 20px;
+}
+.about-me .text {
+  padding: clamp(8px, 10px, 15px) clamp(10px, 25px, 35px);
+  background-color: transparent;
+}
+@media only screen and (min-width: 450px) {
+  .about-me .first-image {
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 720px) {
+  .about-me {
+    height: calc(100vh - 88px);
+    grid-auto-flow: column;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas: 'first-section' 'second-section';
+  }
+  .about-me .first-section {
+    grid-area: first-section;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    background-color: transparent;
+    /*.first-image {
+        width: 40%;
+      }*/
+  }
+  .about-me .first-section .section-text {
+    grid-row: 1;
+    grid-column: 2;
+    background-color: transparent;
+  }
+  .about-me .first-section .img-wrapper {
+    background-color: transparent;
+  }
+  .about-me .second-section {
+    grid-area: second-section;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    background-color: transparent;
+  }
+  .about-me .second-section .img-wrapper {
+    grid-row: 1;
+    grid-column: 2;
+    background-color: transparent;
+    /*.second-image {
+          width: 60%;
+        }*/
+  }
+  .about-me .second-section .section-text {
+    grid-row: 1;
+    grid-column: 1;
+    background-color: transparent;
+  }
+  .about-me .first-image {
+    width: 70%;
+  }
+  .about-me .second-image {
+    width: 80%;
+  }
+}
+@media (min-width: 950px) {
+  .about-me .first-image {
+    width: 60%;
+  }
+  .about-me .second-image {
+    width: 80%;
+  }
+}
+@media (min-width: 1050px) {
+  .about-me .first-image {
+    width: 50%;
+  }
+  .about-me .second-image {
+    width: 60%;
+  }
+}
+@media (min-width: 1350px) {
+  .about-me .first-image {
+    width: 40%;
+  }
+  .about-me .second-image {
+    width: 50%;
+  }
+}

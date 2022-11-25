@@ -5,6 +5,7 @@ import logo from '../images/logo192.png';
 import '../App.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import resume from '../images/Cilecek_Filip_Zivotopis.pdf';
 
 const Navbar = () => {
   const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
@@ -44,7 +45,7 @@ const Navbar = () => {
                 : setIsHamburgerOpen(true);
             }}
           />
-          <Link to='/kontakt' id='nav-contact'>
+          <Link to={resume} id='nav-contact' download target='_blank'>
             <button>Životopis</button>
           </Link>
         </nav>

@@ -1,0 +1,107 @@
+.about-me {
+  display: grid;
+  font-size: clamp(1rem, 1.3vw, 1.2rem);
+  padding: 1vh;
+  background: linear-gradient(
+    190deg,
+    rgba(36, 37, 42, 1) 50%,
+    rgb(9, 9, 121) 50%,
+    rgba(0, 135, 169, 0.11) 40%
+  );
+  .first-section,
+  .second-section,
+  .section-text,
+  .img-wrapper {
+    background-color: transparent;
+  }
+  .first-image {
+    margin-top: 20px;
+  }
+  .text {
+    padding: clamp(8px, 10px, 15px) clamp(10px, 25px, 35px); //10px 20px;;
+    background-color: transparent;
+  }
+  @media only screen and (min-width: 450px) {
+    .first-image {
+      width: 50%;
+    }
+  }
+  @media only screen and (min-width: 720px) {
+    height: calc(100vh - 88px);
+    grid-auto-flow: column;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      'first-section'
+      'second-section';
+    .first-section {
+      grid-area: first-section;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      background-color: transparent;
+      /*.first-image {
+        width: 40%;
+      }*/
+      .section-text {
+        grid-row: 1;
+        grid-column: 2;
+        background-color: transparent;
+      }
+      .img-wrapper {
+        background-color: transparent;
+      }
+    }
+    .second-section {
+      grid-area: second-section;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      background-color: transparent;
+      .img-wrapper {
+        grid-row: 1;
+        grid-column: 2;
+        background-color: transparent;
+        /*.second-image {
+          width: 60%;
+        }*/
+      }
+      .section-text {
+        grid-row: 1;
+        grid-column: 1;
+        background-color: transparent;
+      }
+    }
+    .first-image {
+      width: 70%;
+    }
+    .second-image {
+      width: 80%;
+    }
+  }
+  @media (min-width: 950px) {
+    .first-image {
+      width: 60%;
+    }
+    .second-image {
+      width: 80%;
+    }
+  }
+  @media (min-width: 1050px) {
+    .first-image {
+      width: 50%;
+    }
+    .second-image {
+      width: 60%;
+    }
+  }
+  @media (min-width: 1350px) {
+    .first-image {
+      width: 40%;
+    }
+    .second-image {
+      width: 50%;
+    }
+  }
+}

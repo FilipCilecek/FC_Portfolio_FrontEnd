@@ -31,14 +31,7 @@ const Btn = styled.button`
     }
   }
 `;
-/*
-<div className='functional-buttons'>
-        <button onClick={() => setProject(null)}>
-          <FontAwesomeIcon icon={faArrowLeft} />
-          ZpátkyXD
-        </button>
-      </div>
-*/
+
 const Btnback = ({ setProject }) => {
   return (
     <Btn onClick={setProject}>
