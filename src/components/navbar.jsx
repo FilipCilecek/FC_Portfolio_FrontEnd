@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/navbar.css';
-import logo from '../images/logo192.png';
+import logo from '../images/filip-logo.png';
 import '../App.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
@@ -67,7 +67,9 @@ const Navbar = () => {
           <Link to='/about-me'>About me</Link>
         </li>
         <li>
-          <Link to='/kontakt'>Životopis</Link>
+          <Link to={resume} id='nav-contact' download target='_blank'>
+            <button>Životopis</button>
+          </Link>
         </li>
       </ul>
     </>

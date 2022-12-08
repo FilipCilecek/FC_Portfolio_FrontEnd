@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 const Btn = styled.button`
+  position: absolute;
   background: transparent;
   border-radius: 5px;
   border: 1px solid #00a2ca;

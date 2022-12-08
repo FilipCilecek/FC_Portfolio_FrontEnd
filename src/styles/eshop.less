@@ -1,0 +1,104 @@
+@react-blue: #00a2ca;
+@borders: #025c72;
+@button-hover: #0087a91c;
+
+.eshop-products {
+  display: grid;
+  padding: 3% clamp(3%, 12%, 15%);
+  --grid-layout-gap: 0px 15px;
+  --grid-column-count: 5;
+  --grid-item--min-width: 300px;
+  --gap-count: calc(var(--grid-column-count) - 1);
+  --total-gap-width: calc(var(--gap-count) * var(--grid-layout-gap));
+  --grid-item--max-width: calc(
+    (100% - var(--total-gap-width)) / var(--grid-column-count)
+  );
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(max(var(--grid-item--min-width), var(--grid-item--max-width)), 1fr)
+  );
+  gap: 0px 15px;
+  transition: all 0.1s ease-out 0.1s;
+  @media (max-width: 472px) {
+    margin-top: 10px;
+  }
+  .product {
+    border-right: 1px solid @borders;
+    border-left: 1px solid @borders;
+    border-bottom: 1px solid @borders;
+    padding: 15px;
+    transition: all 0.1s ease-out 0.1s;
+    display: flex;
+    flex-direction: column;
+    background-color: #333338;
+    &:hover {
+      box-shadow: 5px 0px 5px -6px @react-blue, -5px 0px 5px -6px @react-blue;
+    }
+    *:not(Button) {
+      background-color: transparent;
+    }
+    .product-body {
+      height: 90%;
+      h1 {
+        font-size: clamp(20px, 2vh, 30px);
+      }
+      h2,
+      h3 {
+        font-weight: 100;
+        font-size: clamp(16px, 2vh, 22px);
+        .rating-icon-wrapper {
+          //position: relative;
+          /*.star-layout {
+            path {
+              color: transparent;
+              stroke: red;
+              stroke-width: 30;
+            }
+          }*/
+          .star-rating {
+            /*position: absolute;
+            left: 0;
+            top: 4px;*/
+          }
+        }
+        display: flex;
+        p {
+          font-size: clamp(16px, 2vh, 22px);
+          padding-left: 5px;
+        }
+      }
+      p {
+        font-weight: 100;
+        font-size: clamp(14px, 1.5vh, 18px);
+      }
+      .img-wrapper {
+        height: 50%;
+        img {
+          object-fit: contain;
+          max-width: 100%;
+          max-height: 15rem;
+          height: 100%;
+        }
+      }
+      .product-info {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+    }
+
+    .product-footer {
+      height: 10%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      h2 {
+        display: flex;
+        .discount-text {
+          font-size: 0.7rem;
+          color: #d54545;
+        }
+      }
+    }
+  }
+}

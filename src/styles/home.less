@@ -60,6 +60,16 @@
         max-width: 90%;
       }
     }
+    .home-links {
+      display: flex;
+      align-items: flex-start;
+      .home-link {
+        padding-right: 10px;
+      }
+      @media (max-width: 450px) {
+        flex-direction: column;
+      }
+    }
     button {
       padding: 12px 40px;
       background-color: transparent;
@@ -71,6 +81,12 @@
       margin-top: 20px;
       &:hover {
         background-color: @button-hover;
+      }
+      @media (max-width: 600px) {
+        padding: 8px 20px;
+      }
+      @media (max-width: 450px) {
+        margin-top: 10px;
       }
     }
   }

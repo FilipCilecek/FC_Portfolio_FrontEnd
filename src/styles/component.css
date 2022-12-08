@@ -1,3 +1,6 @@
+.component-header {
+  padding-top: 40px;
+}
 .component-pack-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

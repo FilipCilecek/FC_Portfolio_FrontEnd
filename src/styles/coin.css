@@ -20,6 +20,7 @@ body ::-webkit-scrollbar-thumb:hover {
 .crypto-search-wrapper {
   display: flex;
   justify-content: center;
+  padding-top: 40px;
 }
 .crypto-search-wrapper .crypto-search {
   display: flex;

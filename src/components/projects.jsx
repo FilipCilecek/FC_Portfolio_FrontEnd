@@ -7,16 +7,7 @@ import Compoundcalc from './compoundcalc.jsx';
 import Flexboxgame from './flexboxgame.jsx';
 import Spofilify from './spofilify.jsx';
 import Cryptolist from './cryptolist.jsx';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faRodSnake,
-  faArrowTrendUp,
-  faArrowLeft,
-  faShuffle,
-  faBorderAll,
-  faS,
-  faMusic,
-} from '@fortawesome/free-solid-svg-icons';
+import Eshop from './eshop.jsx';
 import { Link } from 'react-router-dom';
 import img_snake from '../images/projects/snake_s.jpg';
 import img_compound from '../images/projects/compound.jpg';
@@ -24,6 +15,7 @@ import img_flex from '../images/projects/flex.jpg';
 import img_spofilify from '../images/projects/spofilify.jpg';
 import img_crypto from '../images/projects/crypto.jpg';
 import img_component from '../images/projects/component.jpg';
+import img_eshop from '../images/projects/eshop.jpg';
 import Btnback from './global-components/Btnback.js';
 import Componentpack from './componentpack.jsx';
 
@@ -86,6 +78,31 @@ function Projects() {
             </div>
           </div>
           <div className='project'>
+            {/*Eshop*/}
+            <div
+              className='project-wrapper'
+              onClick={() => {
+                previousproject.current = project;
+                setProject('eshop');
+              }}
+            >
+              <img src={img_eshop} alt='' draggable='false' />
+              <h1>Eshop</h1>
+              <div className='project-details'>
+                <div className='slider-header-wrapper'>
+                  <h1>Eshop</h1>
+                </div>
+                <p>
+                  Základní e-shop stránka s použití API pro získání dat co
+                  nejblíže realitě. U tohoto projektu jsem prohloubil hlavně své
+                  znalosti předávání props mezi různými komponenty a práci s
+                  většími daty.
+                </p>
+                <p>HTML, CSS - LESS, Styled Components, React, API - Axios</p>
+              </div>
+            </div>
+          </div>
+          <div className='project'>
             {/*Compound calc*/}
             <div
               className='project-wrapper'
@@ -126,9 +143,10 @@ function Projects() {
                   <h1>Component pack</h1>
                 </div>
                 <p>
-                  Component pack udělaný pomocí styled-components. U tohoto
-                  menšího projektu jsem se snažil ukázání dovednosti s
-                  styled-components a dělání re-usable components.
+                  Component pack udělaný pomocí Styled Components. U tohoto
+                  menšího projektu jsem se snažil prohloubit své dovednosti se
+                  Styled Components a tvorbou re-usable components, které by
+                  přispěli k jednotvárnosti jakékoliv stránky v budoucnu.
                 </p>
                 <p>HTML, CSS - LESS, React, Styled Components</p>
               </div>
@@ -175,9 +193,9 @@ function Projects() {
                 </div>
                 <p>
                   Basic snake game udělaný v Reactu. Tímto projektem jsem přišel
-                  do Reactu s tím, že jsem chtěl zjistit rozdíl mezi
-                  JavaScriptem. Většina tohoto projektu je zkopírována z
-                  tutoriálu s tím, že jsem přidal pár svých přídavků.
+                  do Reactu, abych zjistil čím se liší od Javascriptu. Většina
+                  tohoto projektu je zkopírována z tutoriálu s tím, že jsem
+                  přidal pár svých přídavků.
                 </p>
                 <p>HTML, CSS - LESS, React</p>
               </div>
@@ -212,10 +230,9 @@ function Projects() {
       {project === 'compound' && <Compoundcalc></Compoundcalc>}
       {project === 'componentpack' && <Componentpack></Componentpack>}
       {project === 'flexboxgame' && <Flexboxgame></Flexboxgame>}
-      {project === 'spofilify' && (
-        <Spofilify stateChanger={setProject}></Spofilify>
-      )}
+      {project === 'spofilify' && <Spofilify></Spofilify>}
       {project === 'cryptolist' && <Cryptolist></Cryptolist>}
+      {project === 'eshop' && <Eshop></Eshop>}
     </>
   );
 }

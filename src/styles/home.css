@@ -74,6 +74,18 @@
     max-width: 90%;
   }
 }
+.home-main .interduce .home-links {
+  display: flex;
+  align-items: flex-start;
+}
+.home-main .interduce .home-links .home-link {
+  padding-right: 10px;
+}
+@media (max-width: 450px) {
+  .home-main .interduce .home-links {
+    flex-direction: column;
+  }
+}
 .home-main .interduce button {
   padding: 12px 40px;
   background-color: transparent;
@@ -86,4 +98,14 @@
 }
 .home-main .interduce button:hover {
   background-color: #0087a91c;
+}
+@media (max-width: 600px) {
+  .home-main .interduce button {
+    padding: 8px 20px;
+  }
+}
+@media (max-width: 450px) {
+  .home-main .interduce button {
+    margin-top: 10px;
+  }
 }

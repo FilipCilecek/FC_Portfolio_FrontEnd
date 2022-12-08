@@ -18,8 +18,7 @@ const Btn = styled.button`
           color: #00a2ca;
           background: transparent;
           border: 1px solid #00a2ca;
-          &:hover,
-          &:focus {
+          &:hover {
             background: #0087a91c;
           }
         `;
@@ -29,8 +28,7 @@ const Btn = styled.button`
           background: transparent;
           border: none;
           box-shadow: none;
-          &:hover,
-          &:focus {
+          &:hover {
             background: #0087a91c;
           }
         `;
@@ -39,8 +37,7 @@ const Btn = styled.button`
           background: #e0e0e0;
           color: black;
           border: none;
-          &:hover,
-          &:focus {
+          &:hover {
             background: #aeaeae;
           }
         `;
@@ -68,7 +65,7 @@ const Btn = styled.button`
   }}
 `;
 
-const Button = ({ variant, size, text, disableShadow, disabled }) => {
+const Button = ({ variant, size, text, disableShadow, disabled, onClick }) => {
   return (
     <>
       <Btn
@@ -76,6 +73,7 @@ const Button = ({ variant, size, text, disableShadow, disabled }) => {
         size={size}
         disableShadow={disableShadow}
         disabled={disabled}
+        onClick={onClick}
       >
         {text}
       </Btn>

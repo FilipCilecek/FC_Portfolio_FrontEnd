@@ -1,22 +1,13 @@
 import React from 'react';
 import '../App.js';
 import '../styles/component.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faAlignCenter,
-  faBarsProgress,
-  faChartLine,
-  faCircleArrowDown,
-  faDatabase,
-} from '@fortawesome/free-solid-svg-icons';
 import Button from './component-pack/Button.js';
 import Input from './component-pack/Input.js';
-import { text } from '@fortawesome/fontawesome-svg-core';
 
 function Componentpack() {
   return (
     <>
-      <h1>Component Pack</h1>
+      <h1 className='component-header'>Component Pack</h1>
       <div className='component-pack-wrapper'>
         <div className='component-pack-section'>
           <div className='wrapper-div'>
