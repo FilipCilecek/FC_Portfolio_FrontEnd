@@ -9,6 +9,9 @@
 .about-me .section-text,
 .about-me .img-wrapper {
   background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .about-me .first-image {
   margin-top: 20px;

@@ -20,18 +20,14 @@ function Aboutme() {
           </div>
           <div className='section-text'>
             <div className='text'>
-              Nyní již skoro 3 roky pracuji jako Research Analysta ve větší
-              korporátní firmě. Předešlá práce je blíže k oboru - byl jsem
-              back-end C# programátor - i když pouze na kratší dobu, naučilo mě
-              to dost o tom, jak věci fungují v reálném světě. Před touto
-              zkušeností jsem znal programování pouze ze školy. Konkrétně C#
-              jsem se dodatečně naučil po škole.
-            </div>
-            <div className='text'>
-              K programování se chci vrátit - konkrétně chci přesedlat na
-              front-end, protože mám rád vizualizaci své práce. Jako hlavní
-              library jsem si vybral React, který mi přišel ze všech možností
-              nejsympatyčtější a práce s componenty a hooky mi příjde zajímavá.
+              Programování mě zaujalo na škole, kde jsem se naučil základy
+              programování v C/C++. Poté jsem se ve volných chvílích doučil C# a
+              nastoupil do větší firmy jako back-end developer. Hlavní náplní
+              byl vývoj ERP systému a správa databáze. Nyní jsem už třetím rokem
+              na pozici Reasearch Analysty, ale rád bych se k vývoji vrátil.
+              Konkrétně k webovému front-endu, protože mám rád vizualizaci mé
+              práce. Nejvíc mě zaujal React, kvůli jeho všestrannosti a rád bych
+              se tomuto library dále věnoval.
             </div>
           </div>
         </section>
@@ -44,6 +40,7 @@ function Aboutme() {
               alt={"That's my cat - Tsuki!"}
               round={'0%'}
             ></Imground>
+            Má kočka Tsuki, která pořád zlobí.
           </div>
           <div className='section-text'>
             <div className='text'>
@@ -51,14 +48,11 @@ function Aboutme() {
               životopis, který naleznete v menu nahoře.
             </div>
             <div className='text'>
-              V dnešní době inflace a nejistoty hledám cokoliv v podobě
-              brigády/part-time jako front-endista, než se v tomto oboru pořádně
-              rozkoukám a vzájemně zjistíme, zda nám společná spolupráce sedí.
-              Předem děkuji za navštívění mé stránky a budu se těšit na
-              případnou spolupráci :)
-            </div>
-            <div className='text'>
-              Pro zlepšení nálady přikládám ještě fotku své kočky - Tsuki.
+              Jsem otevřen veškerým nabídkám, moje preference je však práce v
+              podobě brigády/part-time, než se v tomto oboru pořádně rozkoukám a
+              vzájemně zjistíme, zda nám společná spolupráce sedí. Předem děkuji
+              za navštívení mé stránky a budu se těšit na případnou spolupráci
+              :)
             </div>
           </div>
         </section>
